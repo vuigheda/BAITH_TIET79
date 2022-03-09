@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-image: url(./img/background.png);
+        }
+        
+        .wrapper {
+            height: 700px;
+            width: 1089px;
+            background-color: #fff;
+        }
+        
+        nav {
+            height: 50px;
+            width: 100%;
+            background-color: aquamarine;
+            line-height: 50px;
+        }
+        
+        header {
+            height: 150px;
+            width: 100%;
+            background-image: url(./img/Header.jfif);
+        }
+        
+        .wrapper header .head {
+            color: blue;
+            font-size: 100px;
+            font-weight: bold;
+            text-shadow: 5px 5px 5px #999999;
+            text-align: center;
+            line-height: 150px;
+        }
+        
+        .wrapper header:hover {
+            transform: rotate(30deg);
+        }
+        
+        .content {
+            width: 100%;
+            height: 360px;
+            background-color: azure;
+        }
+        
+        aside {
+            height: 360px;
+            width: 30%;
+            float: left;
+        }
+        
+        section {
+            height: 360px;
+            width: 70%;
+            float: left;
+            background-color: yellow;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        .menu li {
+            float: left;
+            width: 150px;
+            height: 50px;
+            list-style: none;
+            text-indent: 20px;
+            background-color: #fff;
+            position: relative;
+        }
+        
+        .menu li .submenu {
+            position: absolute;
+            display: none;
+        }
+        
+        a {
+            font-weight: bold;
+            color: blue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration: none;
+        }
+        
+        .menu li:hover {
+            background-color: #3333;
+        }
+        
+        li:hover>a {
+            font-style: italic;
+            color: #fff;
+        }
+        
+        .menu li:hover .submenu {
+            display: block;
+        }
+        
+        nav span form #txtSubmit {
+            padding: 3px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#">SERVIESC</a> </li>
+                <li> <a href="#">CONTACT</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#"></a>PHONE </li>
+                        <li>
+                            <a href="#"></a>INTERRT</li>
+                        <li>
+                            <a href="#"></a>TIVI</li>
+                    </ul>
+                </li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">HELP</a></li>
+            </ul>
+            <span>
+                <form action="dangky.php" method="post">
+                    <label for="email">Email :</label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="nhap email">
+                    <input type="submit" value="go" id="txtSubmit">
+                </form>
+            </span>
+        </nav>
+        <header>
+            <p class="head">Game Show</p>
+        </header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h2>Hoat Dong Doan</h2>
+                    <img src="./img/Header.jfif" alt="jisoo">
+                </article>
+                <article>
+                    <h2>Hoat Dong Hoc Tap</h2>
+                    <img src="./img/Header.jfif" alt="jisoo">
+                </article>
+                <article>
+                    <h2>Hoat Dong Mua He</h2>
+                    <img src="./img/Header.jfif" alt="jisoo">
+                </article>
+            </aside>
+            <section>
+                <p>Dang ky thong tin</p>
+                <form action="" method="post">
+                    <fieldset>
+                        <legend>Thong tin cua ban</legend>
+                        <label for="lbHoten">Ho Ten :</label>
+                        <input type="text" name="txtHT" id="txtHoTen" placeholder="Nhap ten vao" required minlength="30"> <br> <br>
+                        <label for="lbSCMND">So CMND :</label>
+                        <input type="number" name="munCMND" id="numCMND" placeholder="Nhap CMND" required minlength="30" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+                        <label for="lbNgaySinh">Ngay Sinh :</label>
+                        <input type="text" name="txtNgaySinh" id="txtNgaySinh" placeholder="Nhap Ngay Sinh" required minlength="30">
+                        <BR>
+                        <BR></BR>
+                        </BR>
+                        <input type="submit" value="go" style="text-align: center;">
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+        <div class="clear"></div>
+        <footer>Chaan tran</footer>
+    </div>
+</body>
+
+</html>
